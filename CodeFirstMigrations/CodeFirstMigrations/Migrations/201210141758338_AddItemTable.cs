@@ -24,7 +24,6 @@ namespace CodeFirstMigrations.Migrations
 				from OrderItems
 				order by Item
 			");
-
             
             AddColumn("dbo.OrderItems", "ItemID", c => c.Int(nullable: false));
 
@@ -38,7 +37,6 @@ namespace CodeFirstMigrations.Migrations
 			
 			AddForeignKey("dbo.OrderItems", "ItemID", "dbo.Items", "ItemID", cascadeDelete: true);
             CreateIndex("dbo.OrderItems", "ItemID");
-
             DropColumn("dbo.OrderItems", "Item");
         }
         

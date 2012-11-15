@@ -14,7 +14,6 @@ namespace CodeFirstMigrations.Migrations
 
         protected override void Seed(CodeFirstMigrations.Context context)
         {
-
 			var item1 = new Item() { ItemID = 1, ItemNumber = "Item1" };
 			var item2 = new Item() { ItemID = 2, ItemNumber = "Item2" };
 
